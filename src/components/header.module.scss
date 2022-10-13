@@ -1,0 +1,39 @@
+.logo {
+    background-color: #c92323;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & h1 {
+        font-size: 8rem;
+        color: #fff;
+    }
+}
+
+.nav {
+  background-color: rgb(34, 34, 139);
+  padding: 1rem;
+  
+  & ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+  }
+
+  & li {
+    list-style: none;
+    
+    & a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 3rem;
+
+        &:hover {
+            color: #c92323;
+        }
+    }
+  }
+}
