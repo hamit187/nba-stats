@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import classes from "./Search.module.scss";
-
-let initialRender = true;
 
 const Search = () => {
   const [player, setPlayer] = useState("");
@@ -33,8 +31,10 @@ const Search = () => {
       </div>
       {stats ? (
         <div className={classes.stats}>
-          <div className={classes.fname}>Name: {stats.data[0].first_name} {stats.data[0].last_name}</div>
-          <div className={classes.fname}>Team: {stats.data[0].team.full_name}</div>
+          <div className={classes.text}>Name: {stats.data[0].first_name} {stats.data[0].last_name}</div>
+          <div className={classes.text}>Team: {stats.data[0].team.full_name}</div>
+          <div className={classes.text}>Height: {stats.data[0].height_feet} foot {stats.data[0].height_inches} inches</div>
+          <div className={classes.text}>Weight: {stats.data[0].weight_pounds} LBS</div>
         </div>
       ) : (
         ""
