@@ -33,6 +33,7 @@ const Search = () => {
         <div className={classes.stats}>
           <div className={classes.text}>Name: {stats.data[0].first_name} {stats.data[0].last_name}</div>
           <div className={classes.text}>Team: {stats.data[0].team.full_name}</div>
+          <div className={classes.text}>Position: {stats.data[0].position}</div>
           <div className={classes.text}>Height: {stats.data[0].height_feet} foot {stats.data[0].height_inches} inches</div>
           <div className={classes.text}>Weight: {stats.data[0].weight_pounds} LBS</div>
         </div>
