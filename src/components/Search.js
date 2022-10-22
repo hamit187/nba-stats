@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import classes from "./Search.module.scss";
+
+let initialRender = true;
 
 const Search = () => {
   const [player, setPlayer] = useState("");
@@ -14,6 +16,15 @@ const Search = () => {
     setStats(data);
     console.log(data);
   };
+
+  useEffect(() => {
+    if(initialRender){
+      initialRender = false;
+      return;
+    }
+
+    sendRequest();
+  }, [player]);
 
   const searchHandler = (e) => {
     e.preventDefault();
